@@ -1,0 +1,11 @@
+{
+    "monthlyIncome": {
+        "job1": "Job 1",
+        "job2": "Job 2",
+        "stockInvestments": "Stock Investments",
+        "realEstate": "Real Estate",
+        "business": "Business",
+        "gift": "Gift",
+        "other": "Other"
+      }
+}

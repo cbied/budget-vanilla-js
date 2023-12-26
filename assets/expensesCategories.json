@@ -1,0 +1,29 @@
+{
+    "monthlyExpenses": {
+        "rentOrMortgage": "Rent or Mortgage",
+        "utilities": "Utilities",
+        "groceries": "Groceries",
+        "transportation": "Transportation",
+        "insurance": "Insurance",
+        "healthcare": "Healthcare",
+        "cellPhone": "Cell Phone",
+        "internet": "Internet",
+        "cableOrStreaming": "Cable and Streaming",
+        "diningOut": "Dining Out",
+        "entertainment": "Entertainment",
+        "gymMembership": "Gym Membership",
+        "carPayment": "Car Payment",
+        "fuel": "Fuel",
+        "carMaintenance": "Car Maintenance",
+        "publicTransport": "Public Transport",
+        "loanPayments": "Loan Payments",
+        "creditCardPayments": "Credit Card Payments",
+        "gifts": "Gifts",
+        "petExpenses": "Pet Expenses",
+        "travel": "Travel",
+        "education": "Education",
+        "taxes": "Taxes",
+        "hobbies": "Hobbies",
+        "chearitableGiving": "Chearitable Giving"
+      }
+}

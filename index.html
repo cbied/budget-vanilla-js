@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-container">
+        <div class="expenses">
+            <h3>Total Expenses</h3>
+            <h3 id="expenseTotal">0</h3>
+        </div>
+        <div class="income">
+            <h3>Total Income</h3>
+            <h3 id="incomeTotal">0</h3>
+        </div>
+        <div class="cashflow">
+            <h3>Cashflow</h3>
+            <h3 id="cashflowTotal">0</h3>
+        </div>
+    </div>
+    <div class="middle-container">
+        <form id="addExpenseForm">
+            <h4>category</h4>
+            <select name="Expense Categories" id="expenseDropdown"></select>
+            <h4>amount</h4>
+            <input type="number" name="expense" id="expense">
+            <button type="submit">Add expense</button>
+        </form>
+        <form id="addIncomeForm">
+            <h4>category</h4>
+            <select name="Income Categories" id="incomeDropdown"></select>
+            <h4>amount</h4>
+            <input type="number" name="income" id="income">
+            <button type="submit">Add Income</button>
+        </form>
+    </div>
+    <div class="bottom-container">
+        <div class="categoryAmountsList">
+            <div id="expenseList"></div>
+        </div>
+        <div class="categoryAmountsList">
+            <ul id="incomeList"></ul>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./script.js"></script>
+</html>
