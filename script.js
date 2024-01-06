@@ -41,10 +41,13 @@ function addExpense(event) {
     let expenseValue = +event.target[1].value;
     let total = +expenseTotal.innerText
 
-    const newTotal = total += expenseValue;
-    expenseTotal.innerText = +newTotal;
-    updateCashflow(-+expenseValue)
-    updateList(expenseDropdown.value, expenseValue, false)
+    if(expenseValue > 0) {
+        const newTotal = total += expenseValue;
+        expenseTotal.innerText = +newTotal;
+        updateCashflow(-+expenseValue)
+        updateList(expenseDropdown.value, expenseValue, false)
+    }
+    
 }
 
 function addIncome(event) {
@@ -52,10 +55,13 @@ function addIncome(event) {
     let incomeValue = +event.target[1].value;
     let total = +incomeTotal.innerText
 
-    const newTotal = total + incomeValue;
-    incomeTotal.innerText = newTotal;
-    updateCashflow(+incomeValue)
-    updateList(incomeDropdown.value, incomeValue, true)
+    if(incomeValue > 0) {
+        const newTotal = total + incomeValue;
+        incomeTotal.innerText = newTotal;
+        updateCashflow(+incomeValue)
+        updateList(incomeDropdown.value, incomeValue, true)
+    }
+    
 }
 
 function addCategories() {

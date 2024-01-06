@@ -1,12 +1,39 @@
+@import url("https://rsms.me/inter/inter.css");
 
-HTML, BODY { 
+:root {
+  --color-light: white;
+  --color-dark: #212121;
+  --color-signal: #fab700;
+
+  --color-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-accent: var(--color-signal);
+
+  --size-bezel: 0.5rem;
+  --size-radius: 4px;
+
+  line-height: 1.4;
+
+  font-family: "Inter", sans-serif;
+  font-size: calc(0.6rem + 0.4vw);
+  color: var(--color-text);
+  background: var(--color-background);
+  font-weight: 300;
+  padding: 0 calc(var(--size-bezel) * 3);
+}
+
+html, body { 
     height: 100%; 
+    min-width: 100%;
     margin: 0;
+    padding: 0;
+    background-color: black;
 }
 
 .top-container {
     width: 100%;
-    height: 34%;  
+    height: auto;  
+    min-height: 35%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,16 +55,66 @@ HTML, BODY {
 
 .middle-container {
     width: 100%;
-    height: 33%;  
+    height: auto;  
+    min-height: 35%;  
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: brown;
 }
 
+.formTitle {
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.input {
+    background: var(--color-background);
+    padding: var(--size-bezel);
+    margin-right: var(--size-bezel);
+    border-radius: var(--size-radius);
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: 0.5rem 0.5rem 0 var(--color-shadow, currentColor);
+  
+    &--inverted {
+      --color-background: var(--color-dark);
+      color: var(--color-light);
+      --color-shadow: var(--color-accent);
+    }
+  
+    &--accent {
+      --color-background: var(--color-signal);
+      --color-accent: var(--color-light);
+      color: var(--color-dark);
+    }
+  
+    *:first-child {
+      margin-top: 0;
+    }
+}
+
+.button-group {
+    margin-top: calc(var(--size-bezel) * 2.5);
+  }
+  
+  button {
+    color: currentColor;
+    padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+    background: var(--color-accent);
+    border: none;
+    border-radius: var(--size-radius);
+    font-weight: 900;
+    box-shadow: 0.5rem 0.5rem 0 var(--color-shadow, currentColor);
+  }
+  
+  button + button {
+    margin-left: calc(var(--size-bezel) * 2);
+  }
+  
+
 .bottom-container {
     width: 100%;
-    height: 33%;  
+    height: auto;  
     background-color: aqua;
     display: flex;
     justify-content: space-around;
