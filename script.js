@@ -27,6 +27,7 @@ function updateList(category, amount, isIncome) {
     h4one.innerText = category + ': $' + amount
     h4two.innerText = 'X'
     div.classList.add('categoryList')
+    div.setAttribute('id', (expenseList.children.length).toString())
     div.appendChild(h4one)
     div.appendChild(h4two)
     if(isIncome) {
@@ -48,6 +49,15 @@ function addExpense(event) {
         updateList(expenseDropdown.value, expenseValue, false)
     }
     
+}
+
+function removeExpense(event) {
+    event.preventDefault();
+    console.log(event.target.parentElement.id)
+    console.log((expenseList.children))
+    expenseList.children.filter(elements => {
+        console.log(elements)
+    })
 }
 
 function addIncome(event) {
@@ -97,4 +107,5 @@ function addCategories() {
 
 window.addEventListener("DOMContentLoaded", addCategories)
 addExpenseForm.addEventListener("submit", addExpense);
+expenseList.addEventListener("click", removeExpense);
 addIncomeForm.addEventListener("submit", addIncome);
